@@ -17,6 +17,8 @@ public class CategoriaEntity {
     @OneToMany(mappedBy = "categoria" )
     private List<VideojuegoEntity> videojuegos;
 
+    public CategoriaEntity() {}
+
     public CategoriaEntity(Long id, String nombre) {
         this.id = id;
         this.nombre = nombre;

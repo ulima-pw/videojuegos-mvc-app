@@ -20,8 +20,10 @@ public class VideojuegoEntity {
     @ManyToOne
     private CategoriaEntity categoria;
 
-    @ManyToMany(mappedBy = "videojuegos")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<ConsolaEntity> consolas;
+
+    public VideojuegoEntity() {}
 
     public VideojuegoEntity(Long id, String nombre, String descripcion) {
         this.id = id;

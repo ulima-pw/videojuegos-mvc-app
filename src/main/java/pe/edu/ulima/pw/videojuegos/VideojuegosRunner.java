@@ -28,7 +28,7 @@ public class VideojuegosRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Agregando categorias
-        CategoriaEntity cat1 = new CategoriaEntity(null, "2D Platform");
+        /*CategoriaEntity cat1 = new CategoriaEntity(null, "2D Platform");
         CategoriaEntity cat2 = new CategoriaEntity(null, "Speed run");
         CategoriaEntity cat3 = new CategoriaEntity(null, "Third Person");
         categoriaRepository.save(cat1);
@@ -57,6 +57,9 @@ public class VideojuegosRunner implements CommandLineRunner {
                 cat1
         );
 
+        vjRepository.save(v1);
+        vjRepository.save(v2);
+
         List<ConsolaEntity> consolasV1 = new ArrayList<>();
         consolasV1.add(consola1);
 
@@ -68,6 +71,7 @@ public class VideojuegosRunner implements CommandLineRunner {
         v2.setConsolas(consolasV2);
 
         vjRepository.save(v1);
-        vjRepository.save(v2);
+        vjRepository.save(v2);*/
+
     }
 }

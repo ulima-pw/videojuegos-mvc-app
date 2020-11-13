@@ -1,5 +1,7 @@
 package pe.edu.ulima.pw.videojuegos.model.dao;
 
+import pe.edu.ulima.pw.videojuegos.model.repositories.ConsolaRepository;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,8 +14,10 @@ public class ConsolaEntity {
     @Column(name = "nombre", length = 100)
     private String nombre;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "consolas")
     private List<VideojuegoEntity> videojuegos;
+
+    public ConsolaEntity() {}
 
     public ConsolaEntity(Long id, String nombre) {
         this.id = id;
